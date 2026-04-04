@@ -75,6 +75,18 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 				wchar_t buf[256] = {};
 				GetWindowTextW(g_hEdit, buf, 255);
 				std::wstring text(buf);
+				// 新增功能：替换全角数字 "２" 为半角 "3"
+				size_t posFullWidth = text.find(L"２"); // 全角数字2
+				if (posFullWidth != std::wstring::npos)
+				{
+					g_isReplacing = true;
+					text.replace(posFullWidth, 1, L"3"); // 替换1个字符
+					SetWindowTextW(g_hEdit, text.c_str());
+					// 将光标放到替换后的末尾
+					int newPos = posFullWidth + 1; // "3"长度为1
+					SendMessageW(g_hEdit, EM_SETSEL, newPos, newPos);
+					g_isReplacing = false;
+				}
 				// 替换日语 "に" 为 "さん"
 				size_t posJapanese = text.find(L"に");
 				if (posJapanese != std::wstring::npos)
