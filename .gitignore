@@ -1,0 +1,218 @@
+## 忽略编译输出和中间文件
+
+# 编译结果
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.idb
+*.ipdb
+*.iobj
+*.ncb
+*.sbr
+*.bsc
+
+# 可执行文件（即使没有扩展名）
+[Cc]ommand[Ll]ine[Tt]est*
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# 静态库
+*.lib
+
+## 忽略 IDE 和编辑器配置
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+*.vcxproj.user
+*.vcxproj.*.user
+*.vbproj.user
+*.csproj.user
+*.resx
+*.settings
+*.cachefile
+
+# 适用于 C++ 的 IntelliSense 数据库
+*.VC.db
+*.opensdf
+*.sdf
+
+# Code Analysis 文件
+*.pfx
+*.pfx.user
+*.pfx.user.*
+*.pfx.*
+*.codeanalysis
+
+## 忽略包管理器和依赖
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+
+# vcpkg
+vcpkg_installed/
+vcpkg-manifest-install.log
+
+# 其他包管理器
+*.jar
+*.war
+*.ear
+*.nar
+
+## 忽略测试和覆盖率报告
+
+# 测试结果
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og/
+*.trx
+*.coverage
+*.coverage.xml
+*.coveragejson
+*.coveragexml
+*.coveragegrxml
+*.coveragegrxmlc
+*.coveragegrxmlc.*
+
+# 覆盖率工具
+*.Coverage
+*.VisualState.xml
+
+## 忽略生成的文件和临时文件
+
+# 日志
+*.log
+*.tmp
+*.temp
+*.pid
+
+# 转储文件
+*.dmp
+
+# 崩溃转储
+*.mdmp
+
+# 备份文件
+*~
+*.bak
+*.orig
+
+# 运行时数据
+*.suo
+*.userprefs
+*.pidb
+*.dbproj.schemaview
+
+# 发布配置文件
+*.pubxml.user
+*.pubxml.*.user
+*.pubxml.user.*
+*.pubxml.*.user.*
+
+# 数据库项目文件
+*.dbmdl
+*.dbproj.schemaview
+
+# 单元测试适配器
+*.testsettings
+
+## 忽略性能分析文件
+
+*.psess
+*.vsp
+*.vspscc
+*.vspx
+*.sap
+
+## 忽略安装/部署文件
+
+*.msi
+*.msm
+*.msp
+*.setup
+*.cab
+
+## 忽略证书和密钥
+
+*.pfx
+*.p12
+*.snk
+*.key
+*.cer
+*.crt
+
+## 忽略源代码管理/CI 目录
+
+.git/
+.gitattributes
+.gitignore
+.gitmodules
+.svn/
+.hg/
+.idea/
+
+## 忽略 Docker 相关（如果不希望提交镜像或构建上下文）
+
+docker-compose*.override.yml
+.dockerignore
+
+## 忽略构建脚本生成的内容
+
+[Oo]utput/
+[Ll]ocal[Dd]eploy/
+[Ll]ocal[Pp]ublish/
+
+## 针对 C 和 C++ 的特殊忽略
+
+# 预编译头
+*.pch
+*.gch
+
+# 内存映射文件
+*.map
+
+# Makefile 生成的目标文件
+*.d
+*.d.lst
+
+## 针对 .NET Core / .NET 5+ 的忽略
+
+# 发布文件夹
+/publish/
+/Release/
+/obj/Release/
+/bin/Release/
+
+# 依赖项清单
+*.runtimeconfig.json
+*.deps.json
+
+# 应用程序设置（如果包含敏感信息）
+appsettings.*.json
+secrets.json
+
+# 用户级配置
+*.csproj.user
+*.vbproj.user
+*.fsproj.user
