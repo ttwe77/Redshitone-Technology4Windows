@@ -279,7 +279,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 				UpdateWindow(hWnd);
 				
 				// 阻塞式 Sleep()
-				Sleep(1500);
+				Sleep(17000);
 				
 				// 处理完成
 				MessageBeep(MB_ICONERROR);
