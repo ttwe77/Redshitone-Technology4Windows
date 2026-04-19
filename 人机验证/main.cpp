@@ -45,27 +45,27 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		return (LRESULT)GetStockObject(NULL_BRUSH);
 	}
 		
-	
+		
 	case WM_CREATE:
-	{
-		CreateWindowW(L"STATIC", L"请回答问题证明你不是机器人：1+1 = ？",
-					  WS_CHILD | WS_VISIBLE,
-					  20, 20, 300, 25,
-					  hwnd, nullptr, nullptr, nullptr);
-		
-		g_hEdit = CreateWindowW(L"EDIT", L"",
-								WS_CHILD | WS_VISIBLE | WS_BORDER | ES_AUTOHSCROLL,
-								20, 55, 240, 28,
-								hwnd, (HMENU)ID_EDIT, nullptr, nullptr);
-		
-		CreateWindowW(L"BUTTON", L"验证",
-					  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
-					  270, 55, 80, 28,
-					  hwnd, (HMENU)ID_BUTTON, nullptr, nullptr);
-		
-		g_oldEditProc = (WNDPROC)SetWindowLongPtrW(g_hEdit, GWLP_WNDPROC, (LONG_PTR)EditProc);
-		break;
-	}
+		{
+			CreateWindowW(L"STATIC", L"请回答问题证明你不是机器人：1+1 = ？",
+						  WS_CHILD | WS_VISIBLE,
+						  20, 20, 300, 25,
+						  hwnd, nullptr, nullptr, nullptr);
+			
+			g_hEdit = CreateWindowW(L"EDIT", L"",
+									WS_CHILD | WS_VISIBLE | WS_BORDER | ES_AUTOHSCROLL,
+									20, 55, 240, 28,
+									hwnd, (HMENU)ID_EDIT, nullptr, nullptr);
+			
+			CreateWindowW(L"BUTTON", L"验证",
+						  WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+						  270, 55, 80, 28,
+						  hwnd, (HMENU)ID_BUTTON, nullptr, nullptr);
+			
+			g_oldEditProc = (WNDPROC)SetWindowLongPtrW(g_hEdit, GWLP_WNDPROC, (LONG_PTR)EditProc);
+			break;
+		}
 		
 	case WM_COMMAND:
 		{
@@ -187,3 +187,4 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR, int nCmdShow)
 	
 	return 0;
 }
+

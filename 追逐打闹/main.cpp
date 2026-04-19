@@ -402,3 +402,4 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR, int nCmdShow)
 	}
 	return (int)msg.wParam;
 }
+
