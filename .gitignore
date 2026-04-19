@@ -216,3 +216,8 @@ secrets.json
 *.csproj.user
 *.vbproj.user
 *.fsproj.user
+
+# 保留 bin 目录及其下的 .exe 文件
+!bin/
+!bin/*.exe
+!bin/**/*.exe
