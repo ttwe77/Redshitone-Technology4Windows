@@ -1,0 +1,1 @@
+g++ -std=c++17 -O2 -municode -mwindows main.cpp resource.o -o 傲娇河豚.exe -luser32 -static
