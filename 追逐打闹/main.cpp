@@ -294,6 +294,9 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
 			return hit;
 		}
 		
+	case WM_CTLCOLORSTATIC:
+		return (LRESULT)GetStockObject(WHITE_BRUSH);
+
 	case WM_SIZE:
 		LayoutControls(hwnd);
 		return 0;
@@ -360,11 +363,11 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR, int nCmdShow)
 	wc.style = CS_HREDRAW | CS_VREDRAW;
 	wc.lpfnWndProc = WndProc;
 	wc.hInstance = hInstance;
-	wc.hIcon = LoadIconW(nullptr, IDI_APPLICATION);
-	wc.hCursor = LoadCursorW(nullptr, IDC_ARROW);
-	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+	wc.hIcon = LoadIcon(nullptr, IDI_APPLICATION);
+	wc.hCursor = LoadCursor(nullptr, IDC_ARROW);
+	wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
 	wc.lpszClassName = kClassName;
-	wc.hIconSm = LoadIconW(nullptr, IDI_APPLICATION);
+	wc.hIconSm = LoadIcon(nullptr, IDI_APPLICATION);
 	
 	if (!RegisterClassExW(&wc))
 		return 0;
