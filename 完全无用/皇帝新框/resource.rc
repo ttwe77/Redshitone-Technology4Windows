@@ -1,0 +1,36 @@
+#include <windows.h>
+#include "resource.h"
+
+IDR_TRAYMENU MENU
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "显示边框",        ID_TRAY_SHOWBORDER
+        MENUITEM "锁定位置",        ID_TRAY_LOCKPOS
+        MENUITEM SEPARATOR
+        MENUITEM "总在最前",        ID_TRAY_TOPMOST      
+        MENUITEM SEPARATOR
+        MENUITEM "背景颜色...",     ID_TRAY_COLOR
+        MENUITEM SEPARATOR
+        MENUITEM "退出",            ID_TRAY_EXIT
+    END
+END
+
+IDD_COLOR_DLG DIALOG 0, 0, 200, 150
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择颜色"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "输入十六进制颜色 (例如 FF8000):", -1, 10, 10, 180, 12
+    EDITTEXT IDC_EDIT_COLOR, 10, 25, 180, 14, ES_AUTOHSCROLL
+    PUSHBUTTON "红",      IDC_PRESET_RED,      10, 50, 30, 14
+    PUSHBUTTON "绿",      IDC_PRESET_GREEN,    45, 50, 30, 14
+    PUSHBUTTON "蓝",      IDC_PRESET_BLUE,     80, 50, 30, 14
+    PUSHBUTTON "白",      IDC_PRESET_WHITE,   115, 50, 30, 14
+    PUSHBUTTON "黑",      IDC_PRESET_BLACK,   150, 50, 30, 14
+    PUSHBUTTON "黄",      IDC_PRESET_YELLOW,   10, 70, 30, 14
+    PUSHBUTTON "青",      IDC_PRESET_CYAN,     45, 70, 30, 14
+    PUSHBUTTON "品红",    IDC_PRESET_MAGENTA,  80, 70, 30, 14
+    DEFPUSHBUTTON "确定",  IDOK,                50, 105, 40, 14
+    PUSHBUTTON "取消",     IDCANCEL,           100, 105, 40, 14
+END

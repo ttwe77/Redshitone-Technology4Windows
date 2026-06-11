@@ -1,0 +1,6 @@
+# 1. 编译资源文件
+windres resource.rc -o resource.o
+
+# 2. 编译主程序并链接
+g++ -c main.cpp -o main.o -O2
+g++ main.cpp resource.o -o BlankWindow.exe -mwindows -luser32 -lgdi32 -lcomctl32 -lshell32 -finput-charset=UTF-8 -fexec-charset=GBK
