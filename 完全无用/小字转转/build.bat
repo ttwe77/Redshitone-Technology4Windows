@@ -1,0 +1,1 @@
+g++ -finput-charset=UTF-8 -fexec-charset=UTF-8 -o Ð¡×Ö×ª×ª.exe main.cpp

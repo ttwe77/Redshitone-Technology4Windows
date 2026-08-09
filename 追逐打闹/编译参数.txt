@@ -1,1 +1,3 @@
--mwindows -municode -lgdi32 -luser32
+g++ -O3 -m64 -mwindows -fomit-frame-pointer -flto -fvisibility=hidden -s -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,-O3 -Wl,--dynamicbase -Wl,--nxcompat -Wl,--as-needed main.cpp resource.o -o 追逐打闹.exe -lgdi32 -luser32 -lkernel32 -lwinmm -municode
+
+dotnet build "追逐打闹.csproj" -c Release -o "bin/Release"
