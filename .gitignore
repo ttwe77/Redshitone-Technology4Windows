@@ -17,6 +17,7 @@
 *.ncb
 *.sbr
 *.bsc
+*resource.o
 
 # 可执行文件（即使没有扩展名）
 [Cc]ommand[Ll]ine[Tt]est*
@@ -215,6 +216,10 @@ secrets.json
 *.csproj.user
 *.vbproj.user
 *.fsproj.user
+
+#IDE 相关文件
+.vscode/
+.trae/
 
 # 保留 bin 目录及其下的 .exe 文件
 !bin/

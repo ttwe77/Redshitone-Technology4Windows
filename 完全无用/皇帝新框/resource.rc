@@ -1,6 +1,8 @@
 #include <windows.h>
 #include "resource.h"
 
+IDI_APP ICON "app.ico"
+
 IDR_TRAYMENU MENU
 BEGIN
     POPUP "Tray"
@@ -21,7 +23,7 @@ STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "选择颜色"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT "输入十六进制颜色 (例如 FF8000):", -1, 10, 10, 180, 12
+    LTEXT "Enter a hexadecimal color (e.g., FF8000):", -1, 10, 10, 180, 12
     EDITTEXT IDC_EDIT_COLOR, 10, 25, 180, 14, ES_AUTOHSCROLL
     PUSHBUTTON "红",      IDC_PRESET_RED,      10, 50, 30, 14
     PUSHBUTTON "绿",      IDC_PRESET_GREEN,    45, 50, 30, 14

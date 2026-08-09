@@ -1,0 +1,1 @@
+g++ -o lyzk.exe lyzk.cpp -lgdi32 -lgdiplus -luser32 -static -mwindows -O2 -s

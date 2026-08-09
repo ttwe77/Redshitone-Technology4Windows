@@ -1,5 +1,6 @@
 #define IDR_TRAYMENU      101
 #define IDD_COLOR_DLG     102
+#define IDI_APP           103
 
 #define ID_TRAY_SHOWBORDER 1001
 #define ID_TRAY_LOCKPOS    1002

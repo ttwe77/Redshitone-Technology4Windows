@@ -1,0 +1,2 @@
+windres resource.rc -O coff -o resource.o
+g++ -mwindows -municode -static -static-libgcc -static-libstdc++ main.cpp resource.rc -O2 -o ShutdownBlocker.exe
